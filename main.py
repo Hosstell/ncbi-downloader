@@ -39,7 +39,6 @@ def download_fasta(id_):
 count = 0
 all_fasta = ""
 for id_ in all_ids:
-    print(count, len(ids))
     count += 1
 
     try:
@@ -49,8 +48,10 @@ for id_ in all_ids:
         continue
 
     if len(fasta) < 7880:
+        print(count, len(ids), "-")
         continue
 
+    print(count, len(all_ids))
     all_fasta += fasta
 
 
